@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar mode="ios"
+               color="dark" >
+     <div slot="start">
+      <img src="assets/img/logo.png" alt="logo" style="width: 15%; padding-left: 5%">
+    </div>
+    <ion-title>book</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img src="/assets/img/minidis.png" style="min-width: 300px" />
+          <ion-card-header>
+            <ion-card-subtitle>Diseño</ion-card-subtitle>
+            <ion-card-title>Trabajos dedicados al Diseño Grafico</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button [routerLink]="['/diseno']"  >
+              Entrar
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+          <ion-card>
+            <img src="/assets/img/mini.jpg" style="min-width: 300px" />
+            <ion-card-header>
+              <ion-card-subtitle>Diseño 3D</ion-card-subtitle>
+              <ion-card-title>Modelado y Render 3D</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button [routerLink]="['/modelado']"  >
+                Entrar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+          <ion-col>
+          <ion-card>
+            <img src="/assets/img/mini.jpg" style="min-width: 300px" />
+            <ion-card-header>
+              <ion-card-subtitle>Video</ion-card-subtitle>
+              <ion-card-title>Video y Animación</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button [routerLink]="['/video']"  >
+                Entrar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

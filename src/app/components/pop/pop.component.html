@@ -1,0 +1,8 @@
+<ion-col *ngFor="let card of cards">
+    <ion-card>
+      <ion-card-content>
+        <h1>{{card.nombre}}</h1>
+        <img [src]="card.imagen" style="min-width: 300px;" />
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
