@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar mode="ios"
+               color="dark" >
+     <div slot="start">
+      <img src="assets/img/logo.png" alt="logo" style="width: 15%; padding-left: 5%">
+    </div>
+    <ion-title>BOOK</ion-title>
+  </ion-toolbar>
+  <ion-segment (ionChange)="segmentChanged($event)"
+                color="tertiary">
+      <ion-segment-button value="diseno">
+        <ion-label>Diseño</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="render">
+        <ion-label>Render 3D</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="video">
+        <ion-label>Video</ion-label>
+      </ion-segment-button>
+      
+    </ion-segment>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let card of categoria | async">
+        <ion-card>
+          <h5>{{card.nombre}}</h5>
+          <img [src]= "card.imagen"  style="min-width: 300px">
+          <ion-card-header>
+            <ion-card-subtitle color="light">{{card.tag}}</ion-card-subtitle>
+            <ion-card-title color="light">{{card.conten}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngIf="card.url">
+            <ion-button [href]="card.url">
+              Play
+            </ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

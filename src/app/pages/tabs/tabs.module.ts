@@ -26,7 +26,7 @@ const routes: Routes = [
       },
       {
         path: 'book',
-        loadChildren: '../book/book.module#BookPageModule'
+        loadChildren: '../book2/book2.module#Book2PageModule'
       },
 
       {
