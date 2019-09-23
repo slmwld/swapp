@@ -13,7 +13,7 @@ export class BookPage implements OnInit {
   cards: cards[] = [];
 
   constructor() {
-    this.cards = CARDS.splice(0);
+    this.cards = CARDS.slice(0);
    }
 
   ngOnInit() {
