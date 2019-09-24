@@ -2,7 +2,7 @@
 <widget id="io.ionic.starter" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Agus App</name>
     <description>App muestra</description>
-    <author email="slmwld02@gmail.com" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="slmwld02@gmail.com" href="https://slmwld.github.io/page/">slmwld</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
