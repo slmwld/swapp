@@ -6,11 +6,13 @@ const routes: Routes = [
   { path: 'inicio', loadChildren: './pages/inicio/inicio.module#InicioPageModule' },
   { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'cv', loadChildren: './pages/cv/cv.module#CvPageModule' },
-  { path: 'book', loadChildren: './pages/book/book.module#BookPageModule' },
+  { path: 'book2', loadChildren: './pages/book2/book2.module#Book2PageModule' },
   { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
   { path: 'diseno', loadChildren: './pages/diseno/diseno.module#DisenoPageModule' },
   { path: 'modelado', loadChildren: './pages/modelado/modelado.module#ModeladoPageModule' },
-  { path: 'video', loadChildren: './pages/video/video.module#VideoPageModule' },
+  { path: 'video', loadChildren: './pages/video/video.module#VideoPageModule' },  { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
+
+
 ];
 
 @NgModule({

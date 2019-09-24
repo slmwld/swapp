@@ -7,15 +7,20 @@
     <ion-title>BOOK</ion-title>
   </ion-toolbar>
   <ion-segment (ionChange)="segmentChanged($event)"
-                color="tertiary">
+                color="light"
+                style="background-color: #222428; color: #f9f9f9"
+                scrollable>
+      <ion-segment-button value="todo">
+        <ion-label color="medium">Todo</ion-label>
+      </ion-segment-button>
       <ion-segment-button value="diseno">
-        <ion-label>Diseño</ion-label>
+        <ion-label color="medium">Diseño</ion-label>
       </ion-segment-button>
       <ion-segment-button value="render">
-        <ion-label>Render 3D</ion-label>
+        <ion-label color="medium">Render 3D</ion-label>
       </ion-segment-button>
       <ion-segment-button value="video">
-        <ion-label>Video</ion-label>
+        <ion-label color="medium">Video</ion-label>
       </ion-segment-button>
       
     </ion-segment>
@@ -24,10 +29,10 @@
 <ion-content color="dark">
   <ion-grid fixed>
     <ion-row>
-      <ion-col *ngFor="let card of categoria | async">
+      <ion-col *ngFor="let card of (categoria | async) | filtro: tag:'tag'">
         <ion-card>
           <h5>{{card.nombre}}</h5>
-          <img [src]= "card.imagen"  style="min-width: 300px">
+          <img [src]= "card.imagen"  style="min-width: 300px" (click)="showModal( card.imagen )">
           <ion-card-header>
             <ion-card-subtitle color="light">{{card.tag}}</ion-card-subtitle>
             <ion-card-title color="light">{{card.conten}}</ion-card-title>

@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { Book2Page } from './book2.page';
+import { PipesModule } from '../../pipes/pipes.module';
+import { ModalPage } from '../modal/modal.page';
+import { ModalPageModule } from '../modal/modal.module';
 
 const routes: Routes = [
   {
@@ -15,11 +18,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  entryComponents: [
+    ModalPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    PipesModule,
+    ModalPageModule
   ],
   declarations: [Book2Page]
 })

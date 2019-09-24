@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSegment } from '@ionic/angular';
+import { IonSegment, ModalController } from '@ionic/angular';
 import { ServiceService } from '../../service/service.service';
 import { Observable } from 'rxjs';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-book2',
@@ -11,15 +12,34 @@ import { Observable } from 'rxjs';
 export class Book2Page implements OnInit {
   @ViewChild(IonSegment, { static:true}) segment: IonSegment
   categoria: Observable<any>;
+  tag = '';
 
-  constructor(private service: ServiceService) { }
+  constructor(
+    private service: ServiceService,
+    private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
-    this.segment.value = 'diseno';
+    this.segment.value = 'todo';
     this.categoria = this.service.getCards();
   }
   segmentChanged( event ) {
-    const valorSegmento = event.detail.value;
-    console.log(valorSegmento);
+    let valorSegmento = event.detail.value;
+    if (valorSegmento == 'todo') {
+      //this.tag ='';
+      valorSegmento = '';
+    }
+    this.tag = valorSegmento;
+    console.log(valorSegmento, this.tag);
+  }
+  async showModal( imagen: string ){
+    const modal = await this.modalCtrl.create({
+      component: ModalPage,
+      componentProps: {
+        imagen: imagen
+      }
+
+    });
+    await modal.present();
   }
 }

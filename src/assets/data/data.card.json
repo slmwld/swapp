@@ -11,14 +11,14 @@
     "nombre": "Ferrari Enzo",
     "imagen": "assets/img/book/01.png",
     "conten": "Modelado de Ferrari Enzo",
-    "tag": "Diseño",
+    "tag": "diseno",
     "url": ""
     },
     {
     "nombre": "Video Reel 2019",
     "imagen": "assets/img/minivid.png",
     "conten": "Video Reel 2019",
-    "tag": "Video",
+    "tag": "video",
     "url": "https://www.youtube.com/embed/1He2TyV08h4"
     }
 ]

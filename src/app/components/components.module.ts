@@ -7,7 +7,7 @@ import { PopComponent } from './pop/pop.component';
 
 @NgModule({
   declarations: [
-    PopComponent
+    PopComponent,
   ],
   imports:  [
     CommonModule,
@@ -15,7 +15,7 @@ import { PopComponent } from './pop/pop.component';
     RouterModule
   ],
   exports: [
-    PopComponent
+    PopComponent,
   ]
 })
 export class ComponentsModule { }
