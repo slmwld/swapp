@@ -6,6 +6,14 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+//firebase
+
+import { AngularFireModule } from '@angular/fire';
+import { firebaseConfig } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http' 
@@ -19,7 +27,11 @@ import { PipesModule } from './pipes/pipes.module';
             IonicModule.forRoot(),
             AppRoutingModule,
             HttpClientModule,
-            PipesModule],
+            PipesModule,
+            AngularFireModule.initializeApp(firebaseConfig, 'agus'), // imports firebase/app needed for everything
+            AngularFireDatabaseModule, // imports firebase/database, only needed for database features
+            AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+          ],
   providers: [
     StatusBar,
     SplashScreen,

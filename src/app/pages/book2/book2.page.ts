@@ -3,6 +3,7 @@ import { IonSegment, ModalController } from '@ionic/angular';
 import { ServiceService } from '../../service/service.service';
 import { Observable } from 'rxjs';
 import { ModalPage } from '../modal/modal.page';
+import {AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-book2',
@@ -16,12 +17,14 @@ export class Book2Page implements OnInit {
 
   constructor(
     private service: ServiceService,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    public db: AngularFireDatabase
     ) { }
 
   ngOnInit() {
     this.segment.value = 'todo';
-    this.categoria = this.service.getCards();
+    //this.categoria = this.service.getCards();
+    this.categoria = this.db.list('categoria').valueChanges();
   }
   segmentChanged( event ) {
     let valorSegmento = event.detail.value;
