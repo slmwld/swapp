@@ -1,13 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>modal</ion-title>
+<ion-header no-border
+            >
+  <ion-toolbar mode="ios"
+                color="dark">
+        <img src="assets/img/logo.png" alt="logo" style="width: 15%; padding-left: 5%">
+    <ion-title>{{categoria.nombre}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <img [src]="imagen" alt="" width="100%">
+<ion-content color="dark">
+  <img [src]="categoria.imagen" alt="" width="150%">
+  <ion-card-content *ngIf="categoria.url">
+      <ion-button [href]="categoria.url"
+                  expand="full"
+                  color="danger">
+        Reproducir Video
+      </ion-button>
+    </ion-card-content>
 
-  <ion-button (click)="dismiss()">
+  <ion-button (click)="dismiss()"
+              expand="full"
+              color="tertiary">
     Cerrar
   </ion-button>
 

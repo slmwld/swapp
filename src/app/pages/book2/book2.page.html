@@ -32,7 +32,7 @@
       <ion-col *ngFor="let card of (categoria | async) | filtro: tag:'tag'">
         <ion-card>
           <h5>{{card.nombre}}</h5>
-          <img [src]= "card.imagen"  style="min-width: 300px" (click)="showModal( card.imagen )">
+          <img [src]= "card.imagen"  style="min-width: 300px" (click)="showModal( card )">
           <ion-card-header>
             <ion-card-subtitle color="light">{{card.tag}}</ion-card-subtitle>
             <ion-card-title color="light">{{card.conten}}</ion-card-title>

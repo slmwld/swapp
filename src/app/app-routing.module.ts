@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
   { path: 'diseno', loadChildren: './pages/diseno/diseno.module#DisenoPageModule' },
   { path: 'modelado', loadChildren: './pages/modelado/modelado.module#ModeladoPageModule' },
-  { path: 'video', loadChildren: './pages/video/video.module#VideoPageModule' },  { path: 'modal', loadChildren: './pages/modal/modal.module#ModalPageModule' },
+  { path: 'video', loadChildren: './pages/video/video.module#VideoPageModule' },
+
 
 
 ];

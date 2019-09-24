@@ -7,7 +7,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-  @Input() imagen: string;
+  @Input() categoria: any;
 
   constructor( private modalCtrl: ModalController) { }
 

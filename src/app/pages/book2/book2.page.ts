@@ -32,11 +32,11 @@ export class Book2Page implements OnInit {
     this.tag = valorSegmento;
     console.log(valorSegmento, this.tag);
   }
-  async showModal( imagen: string ){
+  async showModal( categoria ){
     const modal = await this.modalCtrl.create({
       component: ModalPage,
       componentProps: {
-        imagen: imagen
+        categoria: categoria
       }
 
     });
